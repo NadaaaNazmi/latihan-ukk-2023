@@ -27,7 +27,7 @@ if (isset($_POST['cek'])) {
             @session_start();
             $_SESSION['username'] = $d->username;
             $_SESSION['level'] = $d->level;
-            $_SESSION['level'] = $d->level;
+            $_SESSION['id_petugas'] = $d->id_petugas;
             @header('location:../../modul/modul-petugas/');
         }
     }
@@ -39,7 +39,7 @@ if (isset($_POST['cek'])) {
 <!-- header -->
 <?php include('../../assets/header.php') ?>
 
-<body">
+<body>
     <div class="wrapper">
         <!-- Content Wrapper. Contains page content -->
         <!-- Main content -->
@@ -48,7 +48,7 @@ if (isset($_POST['cek'])) {
                 <div class="row justify-content-md-center">
                     <div class="col-md-3" style="margin-top:5%">
                         <!-- jquery validation -->
-                        <div class="card card-primary">
+                        <div class="card card-secondary">
                             <div class="card-header">
                                 <h3 class="card-title"><i class="fa fa-users">&nbsp;</i>Login <small>SISPENMAS</small></h3>
                             </div>
@@ -64,6 +64,7 @@ if (isset($_POST['cek'])) {
                                         <label for="exampleInputPassword1">Password</label>
                                         <input type="password" name="password" class="form-control" placeholder="Masukan Password">
                                     </div>
+                                    <label for="pilihan">.:LOGIN SEBAGAI:.</label>
                                     <div class="form-group">
                                         <select class="form-control" name="pilihan">
                                             <option value="masyarakat">masyarakat</option>
@@ -71,12 +72,12 @@ if (isset($_POST['cek'])) {
                                         </select>
                                     </div>
                                     <div class="form-group mb-0">
-                                        <span class="text text-success">Belum terverifikasi?</span>Coba daftar <a href="registrasi.php">disini</a>
+                                        <span class="text text-dark">Belum terverifikasi?</span>Coba daftar <a href="registrasi.php">disini</a>
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <div class="form-group">
-                                        <button name="cek" type="submit" class="form-control btn btn-primary">Masuk</button>
+                                        <button name="cek" type="submit" class="form-control btn btn-secondary">Masuk</button>
                                     </div>
                                 </div>
                                 <!-- /.card-body -->

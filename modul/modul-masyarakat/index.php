@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+// SESSION
 session_start();
 include('../../config/database.php');
 if (empty($_SESSION['username'])) {
     @header('location:../modul-auth/index.php');
 }
+// CRUD
 if (isset($_POST['edit'])) {
     $status = $_POST['status'];
     $nik = $_POST['nik'];
